@@ -1,0 +1,512 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amr Elsayed - Web Developer</title>
+	<!--fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<!--//fonts-->
+		<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="Author" content="Amr Elsayed">
+		<meta name="keywords" content="Amr Elsayed - Web Developer - Egypt - Cairo - Python Django Developer" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<!-- js -->
+		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- js -->
+	<!-- start-smooth-scrolling -->
+		<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<script src="{% static 'js/msg.js' %}"></script>
+	<!-- start-smooth-scrolling -->
+
+</head>
+<body>
+<!-- banner -->
+<div class="banner" id="home">
+	<div class="container"> 
+		<div class="top-header row">
+			<script src="{% static 'js/classie.js' %}"></script>
+			<!--top-nav---->
+			<div class="logo">
+				<a href="index.html"><img src="{% static 'images/l.png' %}" alt=""/></a>
+			</div>
+			<div class="top-nav">
+				<div class="nav-icon">
+					    <a href="#" class="right_bt" id="activator"><span> </span> </a>
+				</div>
+				<div class="box" id="box">
+					<div class="box_content">        					                         
+						<div class="box_content_center">
+							<div class="form_content">
+								<div class="menu_box_list">
+									<ul>
+										<li><a class="scroll" href="#home"><span>home</span></a></li>
+										<li><a class="scroll" href="#about"><span>about</span></a></li>
+										<li><a class="scroll" href="#skills"><span>skills</span></a></li>
+										<li><a class="scroll" href="#education"><span>education</span></a></li>
+										<li><a class="scroll" href="#services"><span>services</span></a></li>
+										<li><a class="scroll" href="#portfolio"><span>portfolio</span></a></li>
+										<li><a class="scroll" href="#contact"><span>Contact</span></a></li>
+										<div class="clearfix"> </div>
+									</ul>
+								</div>
+								<a class="boxclose" id="boxclose"> <span> </span></a>
+							</div>                                  
+						</div> 	
+					</div> 
+				</div>       	  
+			</div>
+			<!---start-click-drop-down-menu----->
+			        <!----start-dropdown--->
+			         <script type="text/javascript">
+						var $ = jQuery.noConflict();
+							$(function() {
+								$('#activator').click(function(){
+									$('#box').animate({'top':'0px'},900);
+								});
+								$('#boxclose').click(function(){
+								$('#box').animate({'top':'-1000px'},900);
+								});
+							});
+							$(document).ready(function(){
+							//Hide (Collapse) the toggle containers on load
+							$(".toggle_container").hide(); 
+							//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+							$(".trigger").click(function(){
+								$(this).toggleClass("active").next().slideToggle("slow");
+									return false; //Prevent the browser jump to the link anchor
+							});
+												
+						});
+					</script>
+			<!---//End-click-drop-down-menu----->
+			<div class="clearfix"> </div>
+		</div>
+		<div class="banner-info">
+			<div class="banner-left">
+				<img src="{% static 'images/1.jpg' %}" alt="" style="border-radius: 50%"/>
+			</div>
+			<div class="banner-right">
+				<h1>Amr Elsayed</h1>
+				<div class="border"></div>
+				<h2>Web Developer</h2>
+				<a href="{% static 'cv.pdf' %}">DOWNLOAD MY RESUME</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--/header-banner-->
+<!--about-->
+<div class="about text-center" id="about">
+	<div class="container">
+		<h3>ABOUT ME</h3>
+		<div class="strip text-center"><img src="{% static 'images/about.png' %}" alt=" "/></div>
+		<p>Hi! It's Amr here, i am a person who is passionate about web and machine learning and use both of them to create better web experience for the client, I am experinced in building websites and web applications using Python Django Framework and also Front-End technologies. </p>
+        <p>I also have a background of other fields such as mobile apps development and desktop applications, I am always looking for exciting and challenging projects as it give me more experience and it letting me know to different ways of thinking and problem solving.</p>
+		<ul>
+			<li><a class="fb" href="https://www.facebook.com/amr.elsayed.73999"></a></li>
+			<!-- <li><a class="twit" href="#"></a></li> -->
+			<li><a class="in" href="https://www.linkedin.com/in/amr-elsayed-elsabagh-2a9618121/"></a></li>
+			<li><a class="drib" href="https://github.com/AmrElsayedEG/"></a></li>
+		</ul>
+	</div>
+</div>
+<!--//about-->
+<div class="about-back"></div>
+<!--my skill-->
+<div class="my-skills text-center" id="skills">
+	<div class="container">
+		<h3>MY SKILLS</h3>
+		<div class="strip text-center"><img src="{% static 'images/skill.png' %}" alt=" "/></div>
+		<div class="skill-grids">
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-1"></div>
+						<p>Html 5 / CSS 3</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-2"></div>
+						<p>JavaScript</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-3"></div>
+						<p>Photoshop</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-4"></div>
+						<p>Python 3</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-5"></div>
+						<p>Django</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-6"></div>
+						<p>Video Creation</p>
+					</div>
+					<div class="clearfix"> </div>
+				 <script type="text/javascript" src="{% static 'js/circles.js' %}"></script>
+					         <script>
+								var colors = [
+										['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff']
+									];
+                                var p = [0,99,80,90,97,95,98]
+								for (var i = 1; i < p.length; i++) {
+									var child = document.getElementById('circles-' + i),
+										percentage = p[i];
+										
+									Circles.create({
+										id:         child.id,
+										percentage: percentage,
+										radius:     80,
+										width:      10,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[i - 1]
+									});
+								}
+						
+				</script>
+		</div>
+        <div class="extra-skills" style="padding-top: 5%">
+           <h3>Extra Technologies</h3>
+		<div class="strip text-center"><img src="{% static 'images/skill.png' %}" alt=" "/></div>
+            <ul style="list-style-type: none;">
+                 <div class="row">
+                    <div class="col-md-6" style="text-align: left">
+                        <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Celery</a></li>
+                        <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Rest API</a></li>
+                        <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Web Scrapping</a></li>
+                        <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Django ORM</a></li>
+                        <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Version Control</a></li>
+                        <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>SQL</a></li>
+                        <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Pandas</a></li>
+                        <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Scikit-Learn Lib</a></li>
+                        <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>TensorFlow</a></li>
+                     </div>
+                     <div class="col-md-6" style="text-align: left">
+                         <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Bootstrap</a></li>
+                        <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>WordPress</a></li>
+                         <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>C++ / C#</a></li>
+                         <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Virtual Machine / Docker</a></li>
+                         <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Machine Learning / Data Science Technologies</a></li>
+                         <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Matplotlib</a></li>
+                         <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>FireBase</a></li>
+                         <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>PyCharm</a></li>
+                         <li><img src="{% static 'images/correct.png' %}" width="7%" height="7%"><a>Jupyter</a></li>
+                     </div>
+                </div>
+                 
+            </ul>
+        </div>
+	</div>	
+</div>
+<!--//my skill-->
+<div class="my-skill-back"></div>
+<!--education-->
+<div class="education text-center" id="education">
+	<div class="container">
+		<div class="edu-info">
+			<h3>EDUCATION</h3>
+		</div>
+		<div class="strip text-center"><img src="{% static 'images/edu.png' %}" alt=" "/></div>
+		<div class="edu-grids">
+			<div class="col-md-6 edu-grid">
+				<p>2014 - 2017</p><span>Graduated</span>
+				<img src="{% static 'images/arrow.png' %}" alt=""/>
+				<div class="edu-border">
+					<div class="edu-grid-master">
+						<h3>High School</h3>
+						<h4>Sedky Soliman School</h4>
+					</div>
+					<div class="edu-grid-info">
+						<h5>Got graduated from high school in 2017, Particibated in many projects in the name of school</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 edu-grid">
+				<p>2017 - 2021</p><span>Still Exp. 2021</span>
+				<img src="{% static 'images/arrow.png' %}" alt=""/>
+				<div class="edu-border">
+					<div class="edu-grid-master">
+						<h3>Bachelor of Computer Science</h3>
+						<h4>New Cairo Academy</h4>
+					</div>
+					<div class="edu-grid-info">
+						<h5>Expecting to graduate 2021 to get Bachelor of Computer Science Degree</h5>
+					</div>
+				</div>
+			</div>
+			
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	
+</div>
+<!--//education-->
+<div class="strip-border"><p></p></div>
+   
+<div class="work-experience text-center">
+	
+	<div class="container">
+		<div class="work-info">
+			<h3>WORK EXPERIENCE</h3>
+		</div>
+		<div class="strip text-center"><img src="{% static 'images/work.png' %}" alt=" "/></div>
+		<div class="work-grids">
+			<div class="col-md-4 w-grid">
+				<div class="work-grid">
+					<h3>2017 - 2021</h3>
+					<div class="work-grid-info">
+						<h4>Enactus</h4>
+						<h5>Web Developer</h5>
+						<p>Worked in a team who is developing apps for multiple platforms, worked with Web apps and also mobile apps and creting apps for sponsores.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 w-grid">
+				<div class="work-grid">
+					<h3>2017 - Now</h3>
+					<div class="work-grid-info">
+						<h4>Various Clients</h4>
+						<h5>Web Developer</h5>
+						<p>i have done projects for variuos clients using web technologies as Django and Front-End along with machine learning projects built inside the app.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 w-grid">
+				<div class="work-grid">
+					<h3>2018 - Now</h3>
+					<div class="work-grid-info">
+						<h4>Various Clients</h4>
+						<h5>Data Science / Machine Learning</h5>
+						<p>I have done multiple Data Science and Machine learning projects to variuos clients to help them understand their business better and make descessions.</p>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+
+    
+<div class="services-back"></div>
+
+<!--services-->
+<div class="services text-center" id="services">
+	<div class="container">
+		<div class="ser-info">
+			<h3>SERVICES</h3>
+		</div>
+		<div class="strip text-center"><img src="{% static 'images/ser.png' %}" alt=" "/></div>
+		<div class="ser-grids">
+			<div class="col-md-3 ser-grid">
+				<div class="ser-imagea"></div>
+				<h3>Web Design</h3>
+				<p>Using Front-End technologies to design a website from scratch and making sure it's responsive.</p>
+			</div>
+            <div class="col-md-3 ser-grid">
+				<div class="ser-imaged"></div>
+				<h3>Development</h3>
+				<p>Using Back-End technologies to develope full website with other technologies if necessary.</p>
+			</div>
+			<div class="col-md-3 ser-grid">
+				<div class="ser-imageb"></div>
+				<h3>Graphic Design</h3>
+				<p>Using multiple tools to create Designs ,Images, Videos.</p>
+			</div>
+			<div class="col-md-3 ser-grid">
+				<div class="ser-imagec"></div>
+				<h3>Content Writer</h3>
+				<p>Create creative content in many fields, Science - Computer Scince world - more...</p>
+			</div>
+			
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//services-->
+<!--portfolio-->
+<div class="gallery-section text-center" id="portfolio">
+	<div class="container">
+		<h3>PORTFOLIO</h3>
+		<div class="strip text-center"><img src="{% static 'images/port.png' %}" alt=" "/></div>
+		<p>Here are some of my websites that i have made Front-End and also Back-End, Here you will find Web Development projects only not seperate machine learning of designs.</p>
+		<div class="gallery-grids">
+			<div class="top-gallery">
+				{% for project in project %}
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="/project-{{project.id}}"><img src="{{project.primary_img.url}}" style="width:380px;height:380px" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>{{project.name}}</h4>
+							<p>{{project.category}}</p>
+							<div class="button"><a href="/project-{{project.id}}">VIEW</a></div>
+						</div>
+				</div></a>
+				{% endfor %}
+
+				<div class="clearfix"> </div>
+			</div>
+				<link rel="stylesheet" href="css/swipebox.css">
+				<script src="{% static 'js/jquery.swipebox.min.js' %}"></script>
+					<script type="text/javascript">
+						jQuery(function($) {
+							$(".swipebox").swipebox();
+						});
+					</script>
+		</div>
+	</div>
+</div>
+<!--//portfolio-->
+<!--process-->
+<div class="process text-center">
+	<div class="container">
+		<h3>PROCESS</h3>
+		<div class="strip text-center"><img src="{% static 'images/pro.png' %}" alt=" "/></div>
+		<div class="process-girds">
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagea"></div>
+					<p>IDEA</p>
+					<img src="{% static 'images/6.png' %}" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imageb"></div>
+					<p>CONCEPT</p>
+					<img class="pro-imga" src="{% static 'images/6.png' %}" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagec"></div>
+					<p>DESIGN</p>
+					<img class="pro-img" src="{% static 'images/6.png' %}" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imaged"></div>
+					<p>DEVELOP</p>
+					<img class="pro-imgb" src="{% static 'images/6.png' %}" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagee"></div>
+					<p>TEST</p>
+					<img src="{% static 'images/6.png' %}" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagef"></div>
+					<p>LAUNCH</p>
+					
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//process-->
+<div class="process-back"></div>
+
+
+
+
+
+<!--contact-->
+<div class="contact" id="contact">
+	<div class="container">
+		<div class="contact-info text-center">
+			<h3>CONTACT</h3>
+			<div class="strip text-center"><img src="{% static 'images/con1.png' %}" alt=" "/></div>
+		</div>
+		<div class="contact-grids">
+			<div class="col-md-5 contact-left">
+				<h3>Say Hi to Me</h3>
+				<div class="stripb"></div>
+				<ul>
+					
+					<li>Cairo, Egypt</li>
+					<li>+2 01121147961</li>
+					<li><a href="mailto:elsayed.amr50@gmail.com">elsayed.amr50@gmail.com</a></li>
+				</ul>
+			</div>
+			<div class="col-md-7 contact-right">
+				<h3>Drop Me A Line</h3>
+				<div class="stripb"></div>
+				<form method="post">
+					{% csrf_token %}
+					<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="" name="name">
+					<input type="text" value="E-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail';}" required="" name="email">
+					<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}" required="" name="message">Message</textarea>
+					<input type="submit" value="SEND">
+				</form>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//contact-->
+<div class="footer-top"></div>
+<!--resume-->
+<div class="resume text-center">
+	<div class="container">
+		<div class="strip text-center"><a href="#"><img src="{% static 'images/down.png' %}" alt=" "/></a></div>
+		<div class="down"><a href="{% static 'cv.pdf' %}">Download My Resume</a></div>
+	</div>
+</div>
+<!--//resume-->
+
+<!--footer-->
+<div class="footer">
+	<div class="container">
+		<p>Copyright &copy; 2021 - Amr Elsayed</p>
+	</div>
+</div>
+<!--//footer-->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+{% if msg %}
+<script>
+	Swal.fire(
+  'Thank You!',
+  'Message Successfully Sent!',
+  'success'
+)
+</script>
+{% endif %}
+<!-- //here ends scrolling icon -->
+</body>
+</html>

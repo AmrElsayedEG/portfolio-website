@@ -1,0 +1,313 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amr Elsayed</title>
+	<!--fonts-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+          
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<!--//fonts-->
+		<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="Author" content="Amr Elsayed">
+		<meta name="keywords" content="Amr Elsayed - Web Developer - Egypt - Cairo - Python Django Developer" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<!-- js -->
+		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- js -->
+	<!-- start-smooth-scrolling -->
+		<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smooth-scrolling -->
+
+</head>
+<body>
+<!-- banner -->
+<div class="banner page-head" id="home">
+	<div class="container"> 
+		<div class="top-header row">
+			<script src="{% static 'js/classie.js' %}"></script>
+			<!--top-nav---->
+			<div class="logo">
+				<a href="index.html"><img src="{% static 'images/l.png' %}" alt=""/></a>
+			</div>
+			<div class="top-nav">
+				<div class="nav-icon">
+					   <a href="/"><span class="glyphicon glyphicon-triangle-left" style="font-size: 45px;color: white;"></span></a> 
+				</div>
+				<div class="box" id="box">
+					<div class="box_content">        					                         
+						<div class="box_content_center">
+							<div class="form_content">
+								<div class="menu_box_list">
+									<ul>
+										<li><a href="index.html"><span>home</span></a></li>
+										<li><a href="index.html"><span>about</span></a></li>
+										<li><a href="index.html"><span>services</span></a></li>
+										<li><a href="index.html"><span>portfolio</span></a></li>
+										<li><a href="index.html"><span>Testimonial</span></a></li>
+										<li><a href="index.html"><span>blog</span></a></li>
+										<li><a href="index.html"><span>Contact</span></a></li>
+										<div class="clearfix"> </div>
+									</ul>
+								</div>
+								<a class="boxclose" id="boxclose"> <span> </span></a>
+							</div>                                  
+						</div> 	
+					</div> 
+				</div>       	  
+			</div>
+			<!---start-click-drop-down-menu----->
+			        <!----start-dropdown--->
+			         <script type="text/javascript">
+						var $ = jQuery.noConflict();
+							$(function() {
+								$('#activator').click(function(){
+									$('#box').animate({'top':'0px'},900);
+								});
+								$('#boxclose').click(function(){
+								$('#box').animate({'top':'-1000px'},900);
+								});
+							});
+							$(document).ready(function(){
+							//Hide (Collapse) the toggle containers on load
+							$(".toggle_container").hide(); 
+							//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+							$(".trigger").click(function(){
+								$(this).toggleClass("active").next().slideToggle("slow");
+									return false; //Prevent the browser jump to the link anchor
+							});
+												
+						});
+					</script>
+			<!---//End-click-drop-down-menu----->
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--/header-banner-->
+<!--single-page-->
+	<div class="sample-page">
+		<div class="container">
+			<div class="sam-head text-center">
+				<h3>{{project.name}} <span style="color: red">{% if project.is_live %}(Live) {% else %} (GitHub) {%endif %}</span></h3>
+                <a href="{{project.project_url}}" style="color: white;"><button class="btn btn-info" style="width: 30%;margin-top: 3%">Visit Project</button></a>
+				<div class="strip text-center"><img src="{% static 'images/blog.png' %}" alt=" "/></div>
+			</div>
+            <div class="row">
+			<div class="col-md-6 sample-page-left" >
+<div class="pro-img">
+				<div class="sample-page-info">
+					<!-- <img src="{{project.primary_img.url}}" style="width:540px;height:252px" alt=""/> -->
+
+                    
+					
+					<img id="myImg" src="{{project.primary_img.url}}" alt="Snow" style="width:540px;height:252px;object-fit: cover;">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+</div>
+
+					
+						
+				</div>
+			</div>	
+</div>
+			<div class="col-md-6 sample-page-left" >
+               <!-- <img src="{{project.secondary_img.url}}" style="width:540px;height:252px" alt=""/> -->
+
+					<img id="myImg1" src="{{project.secondary_img.url}}" alt="Snow" style="width:540px;height:252px;object-fit: cover;">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+</div>
+
+
+            </div>
+                </div>
+            <div class="row pr-dec text-center">
+                <h5>Project Description</h5>
+					<p>{{project.project_description}}</p>
+					<h5>Technologies Used</h5>
+					<p>{{project.technologies_used}}</p>
+                
+            </div>
+			<div class="clearfix"> </div>
+		</div>	
+	</div>
+<!--//single-page-->
+<!--footer-->
+<div class="footer">
+	<div class="container">
+		<p>Copyright &copy; 2021 - Amr Elsayed</p>
+	</div>
+</div>
+<!--//footer-->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+
+<script type="text/javascript">
+	var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+/////////////////////////////////////////////////////////
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg1");
+var modalImg = document.getElementById("img01");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+<style>
+	 /* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#myImg1 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#myImg:hover {opacity: 0.7;}
+#myImg1:hover {opacity: 0.7;}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: red;
+  font-size: 70px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+</body>
+</html>
